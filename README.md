@@ -24,8 +24,8 @@ I am a software engineer based in Surabaya, Indonesia. With a greatest passion o
 -->
 
 
-[![Stats](https://github-readme-stats.vercel.app/api?username=ibnuprtma&theme=tokyonight&show_icons=true&line_height=27)](https://github.com/ssembara/ibnuprtma)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ssembara&hide=blade,html&theme=tokyonight)](https://github.com/ssembara/ibnuprtma)
+[![Stats](https://github-readme-stats.vercel.app/api?username=ibnuprtma&theme=tokyonight&show_icons=true&line_height=27)](https://github.com/ibnuprtma/ibnuprtma)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ssembara&hide=blade,html&theme=tokyonight)](https://github.com/ibnuprtma/ibnuprtma)
 
 <!-- Icons -->
 
