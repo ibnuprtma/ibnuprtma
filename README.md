@@ -1,5 +1,3 @@
-### Hi there 👋
-
 <!--
 **ibnuprtma/ibnuprtma** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -20,7 +18,7 @@ Here are some ideas to get you started:
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ibnuprtma&hide=blade,html&theme=tokyonight" />
 -->
 
-# Hello, there! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
+# Hi, everyone! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 <!--
 I am a software engineer based in Surabaya, Indonesia. With a greatest passion on web technologies like Laravel, Node, and React frameworks. Get in touch via email at sembara9090@gmail.com, or You can find me on [![Twitter][1.2]][1]
 -->
