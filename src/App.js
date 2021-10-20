@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import About from "./partials/About";
+// import About from "./partials/About";
 import Card from "./partials/Card";
 import Footer from "./partials/Footer";
-import Skills from "./partials/Skills";
+// import Skills from "./partials/Skills";
 import data from "./assets/data";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,11 +19,11 @@ function App() {
       <div data-aos="fade-down" data-aos-duration="800">
         <Card name={data.name} title={data.title} social={data.social} />
       </div>
-      {/* <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-        <About title={data.about.title} description={data.about.description} />
-        <Skills skills={data.skills} />
+      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        {/* <About title={data.about.title} description={data.about.description} />
+        <Skills skills={data.skills} /> */}
         <Footer github={data.social.github} />
-      </div> */}
+      </div>
     </div>
   );
 }
