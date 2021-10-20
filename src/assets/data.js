@@ -4,7 +4,7 @@ import { FaPalette, FaReact, FaCode } from "react-icons/fa";
 const BOOTSTRAP_FOR_SKILL_ICON = "text-4xl mx-auto inline-block";
 const data = {
   name: "Ibnu Pratama",
-  title: "Front-End Developer/Designer",
+  title: "Web Developer",
   social: {
     github: "https://github.com/ibnuprtma",
     instagram: "https://instagram.com/ibnuprtma",
