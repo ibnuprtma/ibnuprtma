@@ -7,9 +7,10 @@ const data = {
   title: "Front-End Developer/Designer",
   social: {
     github: "https://github.com/ibnuprtma",
-    dribbble: "https://github.com/ibnuprtma",
-    twitter: "https://github.com/ibnuprtma",
+    instagram: "https://instagram.com/ibnuprtma",
+    twitter: "https://twitter.com/ibnuprtma",
     email: "ibnuprtma@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ibnuprtma/",
   },
   about: {
     title: "My Background",
