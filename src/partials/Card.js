@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa";
 
-function Card({ name, title, social: { github, instagram, twitter, linkedin, email } }) {
+function Card({ name, title, contactCaption, social: { github, instagram, twitter, linkedin, email } }) {
   return (
     <div className="w-full">
       <div className="flex flex-col justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5">
@@ -24,7 +24,10 @@ function Card({ name, title, social: { github, instagram, twitter, linkedin, ema
           <p className="text-xs sm:text-base text-gray-600 pt-2 pb-4 px-5 w-auto inline-block border-b-2">
             {title}
           </p>
-          <div className="flex align-center justify-center mt-4">
+          <p className="text-xs sm:text-base pt-2 inline-block">
+            {contactCaption}
+          </p>
+          <div className="flex align-center justify-center mt-2">
             <a
               className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-gray-800 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
               href={github}
