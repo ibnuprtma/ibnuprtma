@@ -14,7 +14,7 @@ interface Message {
 const INITIAL_MESSAGE: Message = {
   id: "welcome",
   role: "model",
-  text: "Halo bro! 👋 Kenalin, gue **Mini Ibnu** — asisten virtual yang siap jawab semua kepo lu",
+  text: "Halo bro! 👋 Kenalin, gue **Neo** — asisten virtual yang siap jawab semua kepo lu",
   timestamp: "Baru saja"
 };
 
@@ -41,7 +41,7 @@ export default function ChatWidget() {
   // Load chat history and widget state from localStorage on client mount
   useEffect(() => {
     try {
-      const savedHistory = localStorage.getItem("mini_ibnu_chat_messages");
+      const savedHistory = localStorage.getItem("neo_chat_messages");
       if (savedHistory) {
         const parsed = JSON.parse(savedHistory);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -51,7 +51,7 @@ export default function ChatWidget() {
         }
       }
 
-      const savedIsOpen = localStorage.getItem("mini_ibnu_chat_is_open");
+      const savedIsOpen = localStorage.getItem("neo_chat_is_open");
       if (savedIsOpen === "true") {
         setIsOpen(true);
       }
@@ -66,7 +66,7 @@ export default function ChatWidget() {
   useEffect(() => {
     if (!hasHydrated) return;
     try {
-      localStorage.setItem("mini_ibnu_chat_messages", JSON.stringify(messages));
+      localStorage.setItem("neo_chat_messages", JSON.stringify(messages));
     } catch (e) {
       console.error("Gagal menyimpan history chat:", e);
     }
@@ -76,7 +76,7 @@ export default function ChatWidget() {
   useEffect(() => {
     if (!hasHydrated) return;
     try {
-      localStorage.setItem("mini_ibnu_chat_is_open", isOpen ? "true" : "false");
+      localStorage.setItem("neo_chat_is_open", isOpen ? "true" : "false");
     } catch (e) {
       console.error("Gagal menyimpan status chat:", e);
     }
@@ -172,7 +172,7 @@ export default function ChatWidget() {
   const handleReset = () => {
     setMessages([INITIAL_MESSAGE]);
     try {
-      localStorage.removeItem("mini_ibnu_chat_messages");
+      localStorage.removeItem("neo_chat_messages");
     } catch (e) {
       console.error("Gagal menghapus history chat:", e);
     }
@@ -276,7 +276,7 @@ export default function ChatWidget() {
           <div className="flex items-start justify-between gap-2">
             <div className="flex items-center gap-1.5 text-black font-bold font-sans">
               <Sparkles size={14} className="text-[#0047FF] animate-spin" />
-              <span>Tanya Mini Ibnu</span>
+              <span>Tanya Neo</span>
             </div>
             <button
               onClick={() => setShowBubbleTip(false)}
@@ -302,14 +302,14 @@ export default function ChatWidget() {
             setShowBubbleTip(false);
           }}
           className="group relative flex items-center gap-2.5 bg-[#FFD600] text-black px-4 py-3 border-3 border-black shadow-[5px_5px_0px_#000] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000] active:translate-x-0 active:translate-y-0 active:shadow-[3px_3px_0px_#000] transition-all cursor-pointer font-bold font-sans"
-          aria-label="Buka Chat Mini Ibnu"
+          aria-label="Buka Chat Neo"
         >
           <div className="relative">
             <Bot size={22} className="text-black group-hover:rotate-12 transition-transform" />
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#10B981] border border-black rounded-full animate-ping" />
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#10B981] border border-black rounded-full" />
           </div>
-          <span className="text-sm tracking-wide uppercase font-extrabold">Tanya Mini Ibnu</span>
+          <span className="text-sm tracking-wide uppercase font-extrabold">Tanya Neo</span>
           <span className="bg-[#0047FF] text-white text-[10px] font-mono px-1.5 py-0.5 border border-black uppercase tracking-wider">
             Online
           </span>
@@ -344,7 +344,7 @@ export default function ChatWidget() {
               <div className="flex items-center gap-1.5 ml-2">
                 <Terminal size={14} className="text-[#FFD600]" />
                 <span className="text-xs font-bold text-gray-200 tracking-wider font-mono">
-                  MINI IBNU
+                  Neo
                 </span>
               </div>
             </div>
@@ -389,7 +389,7 @@ export default function ChatWidget() {
                   {/* <span>MODEL: GEMINI FLASH ⚡</span> */}
                 </div>
                 <span className="text-[10px] bg-black text-white px-1.5 py-0.2 rounded-xs">
-                  PERSONA: IBNU PRATAMA
+                  LET'S CHAT
                 </span>
               </div>
 
@@ -414,7 +414,7 @@ export default function ChatWidget() {
                       ) : (
                         <>
                           <span className="bg-[#0047FF] text-white px-1 border border-black font-bold flex items-center gap-1">
-                            <Bot size={10} /> MINI IBNU
+                            <Bot size={10} /> Neo
                           </span>
                           <span>{msg.timestamp}</span>
                         </>
@@ -446,7 +446,7 @@ export default function ChatWidget() {
                   <div className="flex flex-col items-start">
                     <div className="flex items-center gap-1.5 text-[10px] text-gray-600 font-mono mb-1">
                       <span className="bg-[#0047FF] text-white px-1 border border-black font-bold flex items-center gap-1">
-                        <Bot size={10} /> MINI IBNU
+                        <Bot size={10} /> Neo
                       </span>
                       <span>sabar ngetikk....</span>
                     </div>
@@ -462,7 +462,7 @@ export default function ChatWidget() {
                           style={{ animationDelay: "0.3s" }}
                         />
                       </div>
-                      <span className="text-gray-600">Mini Ibnu lagi ngetik sabar...</span>
+                      <span className="text-gray-600">Neo lagi ngetik sabar...</span>
                     </div>
                   </div>
                 )}

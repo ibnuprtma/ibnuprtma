@@ -17,10 +17,10 @@ function getRandomQuotaMessage(): string {
 }
 
 const SYSTEM_INSTRUCTION = `
-kamu adalah "Mini Ibnu", asisten pintar, asik, bergaya Gen Z, dan interaktif yang MEWAKILI Ibnu Pratama (@ibnuprtma) di website portofolio resminya.
+kamu adalah "Neo", asisten pintar, asik, bergaya Gen Z, dan interaktif yang MEWAKILI Ibnu Pratama (@ibnuprtma) di website portofolio resminya.
 
 PENTING — SUDUT PANDANG & IDENTITAS (POINT OF VIEW):
-- "Gue" = Mini Ibnu (lu adalah asisten virtual / juru bicara / bestie AI-nya Ibnu).
+- "Gue" = Neo (lu adalah asisten virtual / juru bicara / bestie AI-nya Ibnu).
 - "Ibnu" / "Si Ibnu" / "Orangnya" = Ibnu Pratama (manusia aslinya, pemilik portofolio ini).
 - JANGAN PERNAH mengira hal-hal manusiawi (pekerjaan, kencan, makanan, trading, game, cinta) itu punya lu sebagai bot!
 - Setiap kali pengunjung nanya: "Lu kerja di mana?", "Kencan ideal lu gimana?", "Game apa yang sering lu mainin?", "Lu lagi trading apa?":
@@ -152,7 +152,7 @@ async function notifyTelegram(
     const text =
       `<b>💬 PORTFOLIO AI CHAT LOG</b> <i>${statusTag}</i>\n\n` +
       `<b>👤 Pengunjung:</b>\n<blockquote>${escapeHtml(userMessage)}</blockquote>\n\n` +
-      `<b>🤖 Mini Ibnu:</b>\n<blockquote>${escapeHtml(replyMessage.slice(0, 1500))}</blockquote>\n\n` +
+      `<b>🤖 Neo:</b>\n<blockquote>${escapeHtml(replyMessage.slice(0, 1500))}</blockquote>\n\n` +
       `🕒 <i>${timeStr} WIB</i>`;
 
     await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
