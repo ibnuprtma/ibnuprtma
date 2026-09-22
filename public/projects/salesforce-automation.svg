@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#0047FF" opacity="0.15" />
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="#FFFFFF" />
+  <rect width="800" height="450" fill="url(#grid)" />
+
+  <!-- Window Frame -->
+  <rect x="25" y="25" width="750" height="400" fill="#FEFCE8" stroke="#0A192F" stroke-width="3" />
+  <rect x="25" y="25" width="750" height="40" fill="#0A192F" />
+
+  <!-- Window Header Dots & Title -->
+  <circle cx="50" cy="45" r="6" fill="#FF5F56" />
+  <circle cx="70" cy="45" r="6" fill="#FFBD2E" />
+  <circle cx="90" cy="45" r="6" fill="#27C93F" />
+  <text x="120" y="50" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="bold">SALESFORCE AUTOMATION &amp; ANALYTICS PORTAL // CLIENT_REPORT_v3</text>
+
+  <!-- Stat Cards Row -->
+  <g transform="translate(50, 85)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="210" height="75" fill="#FFFFFF" stroke="#0A192F" stroke-width="2" />
+    <rect x="4" y="4" width="210" height="75" fill="none" stroke="#0047FF" stroke-width="2" opacity="0.4" />
+    <text x="15" y="25" font-family="monospace" font-size="11" fill="#747688" font-weight="bold">DEPLOYED WORKFLOWS</text>
+    <text x="15" y="58" font-family="sans-serif" font-size="28" fill="#0A192F" font-weight="bold">30+ Projects</text>
+
+    <!-- Stat 2 -->
+    <rect x="245" y="0" width="210" height="75" fill="#FFFFFF" stroke="#0A192F" stroke-width="2" />
+    <text x="260" y="25" font-family="monospace" font-size="11" fill="#747688" font-weight="bold">SYNC EFFICIENCY</text>
+    <text x="260" y="58" font-family="sans-serif" font-size="28" fill="#0047FF" font-weight="bold">99.94%</text>
+
+    <!-- Stat 3 -->
+    <rect x="490" y="0" width="210" height="75" fill="#FFD600" stroke="#0A192F" stroke-width="2" />
+    <text x="505" y="25" font-family="monospace" font-size="11" fill="#0A192F" font-weight="bold">API PIPELINE RATE</text>
+    <text x="505" y="58" font-family="sans-serif" font-size="28" fill="#0A192F" font-weight="bold">14.2k req/m</text>
+  </g>
+
+  <!-- Architecture Flowchart Diagram -->
+  <g transform="translate(50, 185)">
+    <rect x="0" y="0" width="700" height="215" fill="#FFFFFF" stroke="#0A192F" stroke-width="2" />
+    <rect x="0" y="0" width="700" height="28" fill="#7DD3FC" stroke="#0A192F" stroke-width="2" />
+    <text x="15" y="19" font-family="monospace" font-size="12" font-weight="bold" fill="#0A192F">PIPELINE ARCHITECTURE // REAL-TIME DISPATCH FLOW</text>
+
+    <!-- Node 1: Salesforce Webhook -->
+    <rect x="30" y="55" width="130" height="60" fill="#FEFCE8" stroke="#0A192F" stroke-width="2" />
+    <text x="45" y="80" font-family="monospace" font-size="11" font-weight="bold" fill="#0A192F">Salesforce CRM</text>
+    <text x="45" y="98" font-family="monospace" font-size="10" fill="#0047FF">Apex Webhook</text>
+
+    <!-- Arrow 1 -->
+    <line x1="160" y1="85" x2="200" y2="85" stroke="#0A192F" stroke-width="3" stroke-dasharray="4" />
+    <polygon points="200,80 210,85 200,90" fill="#0A192F" />
+
+    <!-- Node 2: Laravel Queue Worker -->
+    <rect x="210" y="50" width="150" height="70" fill="#FFD600" stroke="#0A192F" stroke-width="2" />
+    <text x="225" y="75" font-family="monospace" font-size="11" font-weight="bold" fill="#0A192F">Laravel REST API</text>
+    <text x="225" y="93" font-family="monospace" font-size="10" fill="#0A192F">Queue Worker</text>
+    <text x="225" y="107" font-family="monospace" font-size="9" fill="#747688">Redis + MariaDB</text>
+
+    <!-- Arrow 2 -->
+    <line x1="360" y1="85" x2="400" y2="85" stroke="#0A192F" stroke-width="3" stroke-dasharray="4" />
+    <polygon points="400,80 410,85 400,90" fill="#0A192F" />
+
+    <!-- Node 3: Data Transformation Engine -->
+    <rect x="410" y="55" width="130" height="60" fill="#FEFCE8" stroke="#0A192F" stroke-width="2" />
+    <text x="425" y="80" font-family="monospace" font-size="11" font-weight="bold" fill="#0A192F">ETL Transform</text>
+    <text x="425" y="98" font-family="monospace" font-size="10" fill="#0047FF">Report Engine</text>
+
+    <!-- Arrow 3 -->
+    <line x1="540" y1="85" x2="575" y2="85" stroke="#0A192F" stroke-width="3" stroke-dasharray="4" />
+    <polygon points="575,80 585,85 575,90" fill="#0A192F" />
+
+    <!-- Node 4: Vue Client UI -->
+    <rect x="585" y="50" width="95" height="70" fill="#7DD3FC" stroke="#0A192F" stroke-width="2" />
+    <text x="595" y="77" font-family="monospace" font-size="11" font-weight="bold" fill="#0A192F">Vue.js /</text>
+    <text x="595" y="93" font-family="monospace" font-size="11" font-weight="bold" fill="#0A192F">PrimeVue</text>
+    <text x="595" y="108" font-family="monospace" font-size="9" fill="#0047FF">Live UI</text>
+
+    <!-- Terminal Status Log Line at bottom -->
+    <rect x="30" y="145" width="640" height="45" fill="#0A192F" />
+    <text x="45" y="165" font-family="monospace" font-size="11" fill="#27C93F">$ [SUCCESS] Salesforce Batch job #8491 synced: 4,280 accounts updated in 1.18s</text>
+    <text x="45" y="180" font-family="monospace" font-size="10" fill="#7DD3FC">&gt; Next webhook listener polling at interval 1000ms [HEALTH: OPTIMAL]</text>
+  </g>
+</svg>

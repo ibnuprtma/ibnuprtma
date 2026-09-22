@@ -31,6 +31,12 @@ export default function Navbar() {
               About
             </Link>
             <Link
+              href="#showcase"
+              className="text-terminal-night/80 hover:text-electric-blue font-medium transition-colors"
+            >
+              Showcase
+            </Link>
+            <Link
               href="#experience"
               className="text-terminal-night/80 hover:text-electric-blue font-medium transition-colors"
             >
@@ -80,6 +86,13 @@ export default function Navbar() {
               className="py-1.5 text-terminal-night hover:text-electric-blue font-medium"
             >
               About
+            </Link>
+            <Link
+              href="#showcase"
+              onClick={() => setIsOpen(false)}
+              className="py-1.5 text-terminal-night hover:text-electric-blue font-medium"
+            >
+              Showcase
             </Link>
             <Link
               href="#experience"

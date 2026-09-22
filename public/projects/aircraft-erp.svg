@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <pattern id="bp-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#7DD3FC" stroke-width="0.8" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Background Blueprint Canvas -->
+  <rect width="800" height="450" fill="#0A192F" />
+  <rect width="800" height="450" fill="url(#bp-grid)" />
+
+  <!-- Outer Border Frame -->
+  <rect x="20" y="20" width="760" height="410" fill="none" stroke="#7DD3FC" stroke-width="2" />
+  <rect x="25" y="25" width="750" height="35" fill="#0047FF" />
+
+  <!-- Header Text -->
+  <text x="40" y="48" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="bold">SMART-AIRCRAFT ERP // MERPATI MAINTENANCE FACILITY (MMF)</text>
+  <rect x="670" y="32" width="95" height="20" fill="#FFD600" />
+  <text x="682" y="46" fill="#0A192F" font-family="monospace" font-size="10" font-weight="bold">ONLINE: LIVE</text>
+
+  <!-- Left: Aircraft Schematic Representation -->
+  <g transform="translate(45, 80)">
+    <rect x="0" y="0" width="340" height="330" fill="#0E2342" stroke="#7DD3FC" stroke-width="1.5" />
+    <text x="15" y="25" font-family="monospace" font-size="11" fill="#7DD3FC" font-weight="bold">AIRCRAFT COMPONENT SCHEMATIC</text>
+
+    <!-- Stylized Airplane Silhouette Linework -->
+    <path d="M 170 50 L 180 120 L 310 180 L 310 200 L 180 180 L 178 260 L 220 290 L 220 305 L 170 295 L 120 305 L 120 290 L 162 260 L 160 180 L 30 200 L 30 180 L 160 120 Z" 
+          fill="none" stroke="#7DD3FC" stroke-width="2.5" stroke-linejoin="round" />
+    <circle cx="170" cy="150" r="12" fill="#FFD600" opacity="0.8" />
+    <text x="170" y="154" font-family="monospace" font-size="8" fill="#0A192F" font-weight="bold" text-anchor="middle">NAV</text>
+
+    <line x1="80" y1="190" x2="40" y2="240" stroke="#FFD600" stroke-width="1.5" stroke-dasharray="2" />
+    <rect x="25" y="240" width="90" height="22" fill="#FFD600" />
+    <text x="32" y="255" font-family="monospace" font-size="9" fill="#0A192F" font-weight="bold">PORT TURBINE [OK]</text>
+
+    <line x1="260" y1="190" x2="230" y2="240" stroke="#7DD3FC" stroke-width="1.5" stroke-dasharray="2" />
+    <rect x="220" y="240" width="105" height="22" fill="#7DD3FC" />
+    <text x="225" y="255" font-family="monospace" font-size="9" fill="#0A192F" font-weight="bold">STBD TURBINE [OK]</text>
+
+    <text x="15" y="315" font-family="monospace" font-size="10" fill="#7DD3FC">FLEET IDENTIFIER: PK-MMF-04B // B737-Classic</text>
+  </g>
+
+  <!-- Right: Work Order Tracking Table -->
+  <g transform="translate(405, 80)">
+    <rect x="0" y="0" width="355" height="330" fill="#0E2342" stroke="#7DD3FC" stroke-width="1.5" />
+    <text x="15" y="25" font-family="monospace" font-size="11" fill="#7DD3FC" font-weight="bold">MAINTENANCE WORKORDERS &amp; INVENTORY</text>
+
+    <!-- Table Row 1 -->
+    <rect x="15" y="45" width="325" height="50" fill="#0A192F" stroke="#7DD3FC" stroke-width="1" />
+    <text x="25" y="65" font-family="monospace" font-size="11" fill="#FFFFFF" font-weight="bold">WO-9481 // Landing Gear Actuator</text>
+    <text x="25" y="82" font-family="monospace" font-size="10" fill="#7DD3FC">Parts In Stock: 12 Units | Mech: Team Alpha</text>
+    <rect x="260" y="55" width="70" height="20" fill="#27C93F" />
+    <text x="270" y="69" font-family="monospace" font-size="10" fill="#0A192F" font-weight="bold">PASSED</text>
+
+    <!-- Table Row 2 -->
+    <rect x="15" y="105" width="325" height="50" fill="#0A192F" stroke="#7DD3FC" stroke-width="1" />
+    <text x="25" y="125" font-family="monospace" font-size="11" fill="#FFFFFF" font-weight="bold">WO-9482 // Avionics TCAS II Sensor</text>
+    <text x="25" y="142" font-family="monospace" font-size="10" fill="#7DD3FC">Calibration &amp; Firmware Reflash v4.2</text>
+    <rect x="260" y="115" width="70" height="20" fill="#FFBD2E" />
+    <text x="265" y="129" font-family="monospace" font-size="9" fill="#0A192F" font-weight="bold">TESTING</text>
+
+    <!-- Table Row 3 -->
+    <rect x="15" y="165" width="325" height="50" fill="#0A192F" stroke="#7DD3FC" stroke-width="1" />
+    <text x="25" y="185" font-family="monospace" font-size="11" fill="#FFFFFF" font-weight="bold">WO-9483 // CFM56 Engine Borescope</text>
+    <text x="25" y="202" font-family="monospace" font-size="10" fill="#7DD3FC">Turbine Blade Inspection Stage 1-3</text>
+    <rect x="260" y="175" width="70" height="20" fill="#27C93F" />
+    <text x="270" y="189" font-family="monospace" font-size="10" fill="#0A192F" font-weight="bold">PASSED</text>
+
+    <!-- Table Row 4 / ERP System Status -->
+    <rect x="15" y="225" width="325" height="90" fill="#0047FF" />
+    <text x="25" y="248" font-family="monospace" font-size="11" fill="#FFD600" font-weight="bold">&gt; ERP MODULES ACTIVE:</text>
+    <text x="25" y="268" font-family="monospace" font-size="10" fill="#FFFFFF">&#8226; Laravel MVC Backend Engine</text>
+    <text x="25" y="285" font-family="monospace" font-size="10" fill="#FFFFFF">&#8226; Parts Inventory &amp; Logistics Tracking</text>
+    <text x="25" y="302" font-family="monospace" font-size="10" fill="#FFFFFF">&#8226; FAA / DGCA Regulatory Compliance Archive</text>
+  </g>
+</svg>
