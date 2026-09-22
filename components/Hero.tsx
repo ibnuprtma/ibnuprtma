@@ -65,7 +65,7 @@ export default function Hero() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-3 right-3 px-2 py-0.5 bg-white border border-terminal-night text-terminal-night font-mono text-[10px] font-bold tracking-widest uppercase shadow-sm">
-                  DEV // 01
+                  DAY // ONE
                 </div>
               </div>
 
@@ -76,11 +76,11 @@ export default function Hero() {
                     Ibnu Pratama
                   </div>
                   <div className="font-mono text-xs text-terminal-night/70">
-                    Frontend Developer &amp; UI Specialist
+                    Software Engineer
                   </div>
                 </div>
                 <div className="px-2 py-1 bg-blueprint-cyan text-terminal-night border border-terminal-night font-mono text-[11px] font-bold -rotate-3 shadow-[2px_2px_0px_#0A192F]">
-                  Surabaya / Remote
+                  @ National Hospital Surabaya
                 </div>
               </div>
             </div>

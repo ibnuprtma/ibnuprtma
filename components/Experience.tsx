@@ -1,51 +1,66 @@
-import { MapPin, Briefcase } from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 
 interface ExperienceItem {
   period: string;
+  type: string;
   title: string;
   company: string;
   location: string;
-  isContract?: boolean;
-  description: string;
-  tag: string;
+  highlights: string[];
+  tags: string[];
   tagBg: string;
-  tapePosition: "right-6 rotate-2" | "left-8 -rotate-2" | "right-12 rotate-3";
+  tapePosition: string;
+  projectNote?: string;
 }
 
 const experiences: ExperienceItem[] = [
   {
-    period: "2024 — Present",
-    title: "Senior Frontend Engineer",
-    company: "Veloce Labs",
-    location: "Remote / Tokyo",
-    description:
-      "Spearheading next-generation client architectures and reducing Core Web Vitals to sub-second benchmarks.",
-    tag: "Next.js • Performance",
-    tagBg: "bg-paper-wash",
+    period: "Nov 2025 — Present",
+    type: "Full-time",
+    title: "Web Developer",
+    company: "National Hospital",
+    location: "Surabaya, East Java · On-site",
+    highlights: [
+      "Developed and maintained mission-critical healthcare web applications, including the Pharmacy Queue & dispensing system to streamline prescription fulfillment and patient wait times.",
+      "Built real-time queue display dashboards and pharmacist operational interfaces using Vue.js and modern JavaScript.",
+      "Integrated internal hospital backend services and RESTful APIs, ensuring high reliability, fast response times, and real-time status updates across departments.",
+      "Enhanced system reliability and responsive user experience for cross-department clinical workflows.",
+    ],
+    tags: ["Vue Js", "Node Js", "Fastify", "Typescript", "Socket IO", "REST APIs", "PostgreSQL", "Mysql", "Tailwind CSS", "Healthcare Systems"],
+    tagBg: "bg-caution-yellow text-ink-black",
     tapePosition: "right-6 rotate-2",
+    projectNote: "🏥 National Hospital Surabaya",
   },
   {
-    period: "2022 — 2024",
-    title: "UI/UX & Web Developer",
-    company: "Hyperion Systems",
-    location: "Surabaya / Hybrid",
-    description:
-      "Constructed multi-product design systems and highly responsive web apps with strict accessibility compliance.",
-    tag: "Design Systems",
-    tagBg: "bg-blueprint-cyan/30",
+    period: "Apr 2021 — Mar 2025",
+    type: "Full-time · 4 yrs",
+    title: "Web Developer",
+    company: "PT. Kreasi Informatika Mandiri",
+    location: "Jakarta · Remote",
+    highlights: [
+      "Built and maintained Salesforce Automation Web Apps and Web Reports for over 30+ client projects.",
+      "Developed and integrated RESTful APIs using Laravel for seamless multi-system data integration.",
+      "Created interactive, accessible UI/UX using Vue.js and PrimeVue with responsive and user-friendly designs.",
+      "Optimized data processing efficiency, significantly reduced page load time, and enhanced overall user satisfaction.",
+    ],
+    tags: ["Vue.js", "Laravel", "CodeIgniter", "MariaDB", "PostgreSQL", "Mysql", "Salesforce Automation"],
+    tagBg: "bg-paper-wash text-terminal-night",
     tapePosition: "left-8 -rotate-2",
   },
   {
-    period: "2020 — 2022",
-    title: "Frontend Specialist",
-    company: "Chrono Studio",
-    location: "Contract / Global",
-    isContract: true,
-    description:
-      "Delivered 20+ bespoke brand marketing sites, client dashboards, and high-velocity conversion funnels.",
-    tag: "Web Apps",
-    tagBg: "bg-paper-wash",
+    period: "Dec 2018 — Feb 2021",
+    type: "Part-time · 2 yrs 3 mos",
+    title: "Web Developer",
+    company: "PT. Sarana Mendulang Arta",
+    location: "Surabaya, Jawa Timur",
+    highlights: [
+      "Designed and developed responsive websites using Laravel, HTML, CSS, JavaScript and Jquery for an ERP system in an aircraft maintenance facility (Merpati Maintenance Facility).",
+      "Performed comprehensive debugging, automated feature testing, and bug fixing to ensure system stability and meet operational aerospace standards.",
+    ],
+    tags: ["PHP", "Laravel", "HTML", "CSS", "JavaScript", "Jquery", "Mysql", "ERP Systems"],
+    tagBg: "bg-blueprint-cyan/40 text-terminal-night",
     tapePosition: "right-12 rotate-3",
+    projectNote: "✈️ SmartAircraft ID (Merpati Maintenance Facility ERP)",
   },
 ];
 
@@ -64,60 +79,85 @@ export default function Experience() {
           </h2>
         </div>
         <div className="font-mono text-xs text-terminal-night/60 uppercase tracking-wider">
-          TRACK RECORD // 2020 — 2025
+          TRACK RECORD // 2018 — PRESENT
         </div>
       </div>
 
       {/* Vertical List of Memo Slip / Receipt Cards */}
-      <div className="space-y-6">
+      <div className="space-y-8">
         {experiences.map((item, idx) => (
           <div
             key={idx}
-            className="relative bg-white border-2 border-terminal-night p-6 sm:p-8 shadow-[4px_4px_0px_#0047FF] hover:-translate-y-1 transition-all group"
+            className="relative bg-white border-2 border-terminal-night p-6 sm:p-8 shadow-[5px_5px_0px_#0047FF] hover:-translate-y-1 transition-all group"
           >
-            {/* Washi Tape Accent */}
+            {/* Tactile Washi Tape Accent */}
             <div
-              className={`absolute -top-3.5 ${item.tapePosition} w-20 h-6 bg-caution-yellow/85 border border-terminal-night pointer-events-none shadow-sm z-10`}
+              className={`absolute -top-3.5 ${item.tapePosition} w-24 h-6 bg-caution-yellow/85 border border-terminal-night pointer-events-none shadow-sm z-10`}
             />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start lg:items-center justify-between">
-              {/* Year Period + Job Title */}
-              <div className="lg:col-span-4 space-y-2">
-                <div className="inline-block px-2.5 py-0.5 bg-caution-yellow text-ink-black font-mono text-xs font-bold border border-terminal-night">
-                  {item.period}
+            {/* Top Card Row: Title, Company, Period & Main Tag */}
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b-2 border-dashed border-terminal-night/20">
+              <div className="space-y-1.5">
+                <div className="flex flex-wrap items-center gap-2 font-mono text-xs">
+                  <span className="px-2.5 py-0.5 bg-caution-yellow text-ink-black font-bold border border-terminal-night">
+                    {item.period}
+                  </span>
+                  <span className="px-2 py-0.5 bg-paper-wash text-terminal-night/80 border border-terminal-night/40">
+                    {item.type}
+                  </span>
                 </div>
-                <h3 className="font-headline text-xl font-bold text-terminal-night group-hover:text-electric-blue transition-colors">
+                <h3 className="font-headline text-2xl font-bold text-terminal-night group-hover:text-electric-blue transition-colors">
                   {item.title}
                 </h3>
               </div>
 
-              {/* Company & Location */}
-              <div className="lg:col-span-3 space-y-1">
-                <div className="font-headline text-base font-bold text-electric-blue">
+              <div className="lg:text-right space-y-1">
+                <div className="font-headline text-lg font-bold text-electric-blue">
                   {item.company}
                 </div>
                 <div className="inline-flex items-center gap-1.5 font-mono text-xs text-terminal-night/70">
-                  {item.isContract ? (
-                    <Briefcase className="w-3.5 h-3.5 text-terminal-night/60" />
-                  ) : (
-                    <MapPin className="w-3.5 h-3.5 text-terminal-night/60" />
-                  )}
+                  <MapPin className="w-3.5 h-3.5 text-terminal-night/60" />
                   <span>{item.location}</span>
                 </div>
               </div>
+            </div>
 
-              {/* Concise Focus Sentence */}
-              <div className="lg:col-span-3 font-mono text-sm text-terminal-night/85 leading-relaxed">
-                {item.description}
-              </div>
+            {/* Bullet Highlights */}
+            <div className="pt-5 space-y-3">
+              <ul className="space-y-2.5 font-mono text-xs sm:text-sm text-terminal-night/85 leading-relaxed">
+                {item.highlights.map((bullet, bIdx) => (
+                  <li key={bIdx} className="flex items-start gap-2.5">
+                    <span className="text-electric-blue font-bold select-none mt-0.5">
+                      ▸
+                    </span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Project / Media Reference if present */}
+              {item.projectNote && (
+                <div className="pt-2">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-paper-wash border border-terminal-night text-terminal-night font-mono text-xs font-bold shadow-[2px_2px_0px_#0A192F]">
+                    <span>{item.projectNote}</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-electric-blue" />
+                  </div>
+                </div>
+              )}
 
               {/* Tech Pill Tags */}
-              <div className="lg:col-span-2 flex lg:justify-end">
-                <span
-                  className={`px-3 py-1 ${item.tagBg} text-terminal-night font-mono text-xs font-bold border border-terminal-night shadow-sm whitespace-nowrap`}
-                >
-                  {item.tag}
+              <div className="pt-3 flex flex-wrap items-center gap-2 border-t border-terminal-night/10">
+                <span className="font-mono text-xs text-terminal-night/60 uppercase mr-1">
+                  Tech:
                 </span>
+                {item.tags.map((tag, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="px-2.5 py-0.5 bg-paper-wash text-terminal-night font-mono text-xs font-medium border border-terminal-night/60 shadow-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

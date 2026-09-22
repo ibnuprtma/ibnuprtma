@@ -1,23 +1,23 @@
 export default function MarqueeTicker() {
   const stackItems = [
+    "Vue.js",
+    "Laravel",
     "Next.js",
-    "Tailwind CSS",
     "TypeScript",
     "React",
-    "Technical SEO",
-    "Web Performance",
-    "Next.js 16",
-    "Cloudflare Edge",
+    "RESTful APIs",
+    "Tailwind CSS",
+    "PrimeVue",
   ];
 
   const toolsItems = [
-    { label: "Figma", bg: "bg-paper-wash", text: "text-terminal-night" },
-    { label: "Git / GitHub", bg: "bg-caution-yellow", text: "text-ink-black" },
-    { label: "VS Code", bg: "bg-paper-wash", text: "text-terminal-night" },
-    { label: "Node.js", bg: "bg-blueprint-cyan", text: "text-terminal-night" },
-    { label: "Server Setup", bg: "bg-paper-wash", text: "text-terminal-night" },
-    { label: "Responsive Design", bg: "bg-paper-wash", text: "text-terminal-night" },
-    { label: "UI/UX Polish", bg: "bg-caution-yellow", text: "text-ink-black" },
+    { label: "Vue.js", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "Laravel", bg: "bg-caution-yellow", text: "text-ink-black" },
+    { label: "Git / GitHub", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "Next.js", bg: "bg-blueprint-cyan", text: "text-terminal-night" },
+    { label: "Salesforce", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "PrimeVue", bg: "bg-caution-yellow", text: "text-ink-black" },
+    { label: "Responsive UI", bg: "bg-paper-wash", text: "text-terminal-night" },
   ];
 
   return (
