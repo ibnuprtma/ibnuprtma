@@ -14,7 +14,7 @@ interface Message {
 const INITIAL_MESSAGE: Message = {
   id: "welcome",
   role: "model",
-  text: "Halo bro! 👋 Kenalin, gue **Neo** — asisten virtual yang siap jawab semua kepo lu",
+  text: "Halo bro! 👋 Kenalin, gue **Neo** — asisten virtual.\n\nBtw nama lu siapa nih? Dan lu siapanya si Ibnu? Temen lama, recruiter, calon klien, jodoh atau cuma sekadar kepo? wkwk",
   timestamp: "Baru saja"
 };
 
@@ -45,6 +45,10 @@ export default function ChatWidget() {
       if (savedHistory) {
         const parsed = JSON.parse(savedHistory);
         if (Array.isArray(parsed) && parsed.length > 0) {
+          // Always ensure welcome message is up to date
+          if (parsed[0]?.id === "welcome") {
+            parsed[0].text = INITIAL_MESSAGE.text;
+          }
           setMessages(parsed);
           // If there's already an ongoing chat, keep bubble tip closed
           setShowBubbleTip(false);
