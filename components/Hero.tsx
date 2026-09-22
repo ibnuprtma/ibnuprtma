@@ -15,7 +15,7 @@ export default function Hero() {
 
           {/* Warm Bold Headline */}
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl font-bold text-terminal-night tracking-tight leading-[1.1]">
-            Hi, I&apos;m{" "}
+            I&apos;m{" "}
             <span className="bg-paper-wash px-2.5 py-0.5 border-2 border-electric-blue shadow-[3px_3px_0px_#0047FF] inline-block -rotate-1 text-electric-blue">
               Ibnu Pratama
             </span>
@@ -24,7 +24,7 @@ export default function Hero() {
 
           {/* Monospace Subtext */}
           <p className="font-mono text-base sm:text-lg text-terminal-night/80 max-w-xl leading-relaxed border-l-4 border-caution-yellow pl-4">
-            A passionate Frontend Developer &amp; UI Specialist crafting clean, fast, and accessible digital experiences using Next.js, React, and modern web technologies.
+            Software Engineer building scalable web applications, real-time systems, and intelligent automation. Blending reliable backend architectures with snappy interfaces and data-driven problem solving.
           </p>
 
           {/* Action Buttons */}

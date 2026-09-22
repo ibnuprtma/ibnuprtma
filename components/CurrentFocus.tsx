@@ -1,19 +1,19 @@
 export default function CurrentFocus() {
   const items = [
     {
-      icon: "🛠",
-      title: "Building & Refining:",
-      text: "Deep diving into Next.js performance optimizations & modern component patterns.",
+      icon: "📈",
+      title: "Algo Trading & Market AI:",
+      text: "Researching AI/ML models for trading strategies and developing custom indicators in TradingView (Pine Script).",
     },
     {
-      icon: "⚡",
-      title: "Experimenting:",
-      text: "Exploring AI coding workflows and snappy micro-interactions.",
+      icon: "🤖",
+      title: "MetaTrader Bots & EA:",
+      text: "Building automated Expert Advisors and execution bots with strict risk management logic.",
     },
     {
-      icon: "📍",
-      title: "Location & Status:",
-      text: "Based in Surabaya, East Java — open for select freelance builds & collaborations.",
+      icon: "🐳",
+      title: "DevOps & Infrastructure:",
+      text: "Diving deeper into Docker containerization and Kubernetes orchestration for scalable environments.",
     },
   ];
 
@@ -39,9 +39,9 @@ export default function CurrentFocus() {
           {items.map((item, idx) => (
             <div
               key={idx}
-              className="p-3 bg-paper-wash border border-terminal-night/20 flex items-start gap-3 hover:border-terminal-night transition-colors"
+              className="p-3.5 bg-paper-wash border border-terminal-night/20 flex items-start gap-3 hover:border-terminal-night transition-colors"
             >
-              <span className="text-base leading-none select-none">
+              <span className="text-lg leading-none select-none">
                 {item.icon}
               </span>
               <div className="leading-relaxed">

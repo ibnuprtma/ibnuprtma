@@ -52,7 +52,7 @@ const experiences: ExperienceItem[] = [
     type: "Part-time · 2 yrs 3 mos",
     title: "Web Developer",
     company: "PT. Sarana Mendulang Arta",
-    location: "Surabaya, Jawa Timur",
+    location: "Surabaya, East Java · Hybrid",
     highlights: [
       "Designed and developed responsive websites using Laravel, HTML, CSS, JavaScript and Jquery for an ERP system in an aircraft maintenance facility (Merpati Maintenance Facility).",
       "Performed comprehensive debugging, automated feature testing, and bug fixing to ensure system stability and meet operational aerospace standards.",
@@ -72,7 +72,7 @@ export default function Experience() {
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-paper-wash text-terminal-night font-mono text-xs border border-terminal-night font-bold uppercase shadow-sm">
             <span className="text-electric-blue">●</span>
-            <span>CAREER JOURNAL // VERIFIED EXPERIENCE</span>
+            <span>CAREER JOURNAL // WORK EXPERIENCE</span>
           </div>
           <h2 className="font-headline text-3xl sm:text-4xl font-bold text-terminal-night tracking-tight">
             Where I&apos;ve Been Working
