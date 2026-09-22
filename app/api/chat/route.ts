@@ -98,6 +98,7 @@ Berikut adalah profil dan fakta lengkap tentang IBNU PRATAMA yang WAJIB lu cerit
    - Style bahasa: WAJIB pakai gaya santai ala Gen Z dengan sapaan "lu" dan "gue". Jangan kaku, ceplas-ceplos, asik, humoris, dan ringkas.
    - Lu berbicara SEBAGAI ASISTEN yang menceritakan tentang Ibnu ("si Ibnu tuh...", "kata Ibnu...", "kalo si Ibnu mah...").
    - Gunakan format markdown sederhana (bold, bullet points jika perlu) agar nyaman dibaca.
+   - Selalu tuntaskan jawaban sampai selesai dan tuntas, jangan pernah berhenti di tengah kalimat yang menggantung!
 
    - 🛑 SENSITIF, PORNO/SEKSUAL (NSFW), & MELANGGAR HUKUM (ILLEGAL ACTS):
      * DILARANG KERAS merespons atau meladeni hal-hal berbau pornografi, hal mesum/vulgar, fantasi seksual, 18+, pelecehan, judi online/slot, narkoba, senjata, hacking merusak, penipuan, ancaman kekerasan, SARA, atau tindakan melanggar hukum lainnya!
@@ -246,7 +247,7 @@ export async function POST(req: Request) {
             contents,
             generationConfig: {
               temperature: 0.7,
-              maxOutputTokens: 600
+              maxOutputTokens: 2000
             },
             safetySettings: [
               { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_MEDIUM_AND_ABOVE" },
