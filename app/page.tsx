@@ -5,6 +5,7 @@ import Showcase from "@/components/Showcase";
 import Experience from "@/components/Experience";
 import CurrentFocus from "@/components/CurrentFocus";
 import Contact from "@/components/Contact";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
         <MarqueeTicker />
         <Experience />
         <CurrentFocus />
-        <Showcase />
+        {/* <Showcase /> */}
         <Contact />
       </main>
+      <ChatWidget />
     </>
   );
 }
