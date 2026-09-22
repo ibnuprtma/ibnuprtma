@@ -1,23 +1,29 @@
 export default function MarqueeTicker() {
   const stackItems = [
     "Vue.js",
+    "Node.js",
+    "Fastify",
     "Laravel",
-    "Next.js",
     "TypeScript",
-    "React",
+    "Socket.IO",
     "RESTful APIs",
+    "PHP",
     "Tailwind CSS",
-    "PrimeVue",
+    "Next.js",
   ];
 
   const toolsItems = [
-    { label: "Vue.js", bg: "bg-paper-wash", text: "text-terminal-night" },
-    { label: "Laravel", bg: "bg-caution-yellow", text: "text-ink-black" },
-    { label: "Git / GitHub", bg: "bg-paper-wash", text: "text-terminal-night" },
-    { label: "Next.js", bg: "bg-blueprint-cyan", text: "text-terminal-night" },
-    { label: "Salesforce", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "PostgreSQL", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "MySQL", bg: "bg-caution-yellow", text: "text-ink-black" },
+    { label: "MariaDB", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "Git / GitLab", bg: "bg-blueprint-cyan", text: "text-terminal-night" },
+    { label: "GitHub", bg: "bg-paper-wash", text: "text-terminal-night" },
     { label: "PrimeVue", bg: "bg-caution-yellow", text: "text-ink-black" },
-    { label: "Responsive UI", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "CodeIgniter", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "jQuery", bg: "bg-paper-wash", text: "text-terminal-night" },
+    { label: "Salesforce", bg: "bg-caution-yellow", text: "text-ink-black" },
+    { label: "Healthcare Systems", bg: "bg-blueprint-cyan", text: "text-terminal-night" },
+    { label: "ERP Systems", bg: "bg-paper-wash", text: "text-terminal-night" },
   ];
 
   return (
