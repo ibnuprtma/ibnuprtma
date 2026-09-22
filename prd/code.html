@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ibnuprtma.vercel.app // Clean &amp; Casual Neo-Paper Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+    }
+    .bg-dot-grid {
+      background-color: #FFFFFF;
+      background-image: radial-gradient(#0047FF 1.1px, transparent 1.1px);
+      background-size: 24px 24px;
+    }
+
+    @keyframes marquee-left {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes marquee-right {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+
+    .animate-marquee-left {
+      display: flex;
+      width: max-content;
+      animation: marquee-left 25s linear infinite;
+    }
+
+    .animate-marquee-right {
+      display: flex;
+      width: max-content;
+      animation: marquee-right 28s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-marquee-left, .animate-marquee-right {
+        animation: none !important;
+      }
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "caution-yellow": "#FFD600",
+            "electric-blue": "#0047FF",
+            "terminal-night": "#0A192F",
+            "paper-wash": "#FEFCE8",
+            "canvas-bg": "#FFFFFF",
+            "blueprint-cyan": "#7DD3FC",
+            "ink-black": "#000000"
+          },
+          fontFamily: {
+            "headline-xl": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["JetBrains Mono", "monospace"],
+            "body-md": ["JetBrains Mono", "monospace"],
+            "body-sm": ["JetBrains Mono", "monospace"],
+            "label-lg": ["JetBrains Mono", "monospace"],
+            "label-md": ["JetBrains Mono", "monospace"],
+            "label-sm": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-dot-grid font-body-md text-terminal-night antialiased min-h-screen selection:bg-caution-yellow selection:text-ink-black">
+<!-- HEADER (Simple &amp; Neat) -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b-2 border-electric-blue">
+<div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Logo -->
+<a class="flex items-center gap-1.5 group" href="#">
+<span class="font-headline-md text-2xl font-bold tracking-tight text-terminal-night uppercase">IBNU</span>
+<span class="w-3.5 h-3.5 bg-caution-yellow border-2 border-electric-blue rounded-full shadow-[1.5px_1.5px_0px_#0047FF] inline-block transition-transform group-hover:scale-125"></span>
+</a>
+<!-- Navigation & Action -->
+<div class="flex items-center gap-6 md:gap-8">
+<nav class="hidden sm:flex items-center gap-6 font-label-md text-sm">
+<a class="text-terminal-night/80 hover:text-electric-blue font-medium transition-colors" href="#about">About</a>
+<a class="text-terminal-night/80 hover:text-electric-blue font-medium transition-colors" href="#experience">Experience</a>
+<a class="text-terminal-night/80 hover:text-electric-blue font-medium transition-colors" href="#contact">Contact</a>
+</nav>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 bg-caution-yellow text-ink-black font-label-md text-xs font-bold uppercase tracking-wider border-2 border-terminal-night shadow-[3px_3px_0px_#0047FF] hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" href="#contact">
+          Say Hi ✨
+        </a>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- SECTION 1: HERO SECTION (Casual Intro & Desk Memo) -->
+<section class="max-w-6xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Column: Friendly Casual Introduction -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+<!-- Tape pill status -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-caution-yellow text-ink-black border-2 border-terminal-night font-label-sm text-xs font-bold uppercase tracking-wide shadow-[3px_3px_0px_#0047FF] -rotate-1">
+<span class="w-2 h-2 rounded-full bg-electric-blue animate-ping"></span>
+<span class="">✨ AVAILABLE FOR NEW PROJECTS</span>
+</div>
+<!-- Warm Bold Headline -->
+<h1 class="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-bold text-terminal-night tracking-tight leading-[1.1]">
+            Hi, I build <span class="bg-paper-wash px-2 border-2 border-electric-blue shadow-[3px_3px_0px_#0047FF] inline-block -rotate-1 text-electric-blue">clean</span>, fast, and modern digital things.
+          </h1>
+<!-- Monospace Friendly Subtext -->
+<p class="font-body-lg text-base sm:text-lg text-terminal-night/80 max-w-xl leading-relaxed border-l-4 border-caution-yellow pl-4">
+            Full-stack web craftsperson blending sleek UI design with snappy Next.js performance. I make digital products that feel effortless and look sharp.
+          </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-6 py-3.5 bg-caution-yellow text-ink-black font-label-md text-sm font-bold border-2 border-terminal-night shadow-[4px_4px_0px_#0047FF] hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#contact">
+<span class="">Let's Chat</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-terminal-night font-label-md text-sm font-bold border-2 border-terminal-night shadow-[4px_4px_0px_#0A192F] hover:bg-paper-wash hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#experience">
+<span class="">Explore Experience</span>
+<span class="material-symbols-outlined text-base">work_history</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Casual Desk Scrap & Polaroid Memo Card -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end relative pt-6 lg:pt-0">
+<div class="relative w-full max-w-sm">
+<!-- Pinned Tape Accent (Top) -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-28 h-7 bg-caution-yellow/85 border border-terminal-night -rotate-2 z-30 shadow-sm pointer-events-none"></div>
+<!-- Main Paper Polaroid Card (Clean tilted neo-paper) -->
+<div class="bg-white border-2 border-terminal-night p-4 pb-6 shadow-[6px_6px_0px_#0047FF] rotate-1 transition-transform hover:rotate-0 duration-300 relative">
+<!-- Polaroid Frame -->
+<div class="w-full aspect-square border-2 border-terminal-night overflow-hidden relative bg-paper-wash">
+<img alt="Ibnu - Developer Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W_XnFyMjw32gBKfPNP1nteLPDQT4YD9aZoe9Cp1Qw9sSn6h1Nm5O74938LazOJa8WDqmI6QKFluJuptUpTmgIPrecJhhjbkEVWV-tSLJ9IXHQZ7xi50KnnH55EaOGuXlaw9AimYTcc3BUVSWHL4LLYMsudFTpisa660y6A_RRtdo3TUhHOfAwEhgtkZ61xXmGrzQ3kkgXFHr6N47pP6UP9svI3LQG6oQpksBt1DXSPmWad_x_rWfssmg">
+<div class="absolute bottom-3 right-3 px-2 py-0.5 bg-white border border-terminal-night text-terminal-night font-label-sm text-[10px] font-bold tracking-widest uppercase shadow-sm">
+                  DEV // 01
+                </div>
+</div>
+<!-- Polaroid Caption / Stamp -->
+<div class="mt-4 flex items-center justify-between px-1">
+<div>
+<div class="font-headline-sm text-lg font-bold text-terminal-night">Ibnuprtma.</div>
+<div class="font-label-sm text-xs text-terminal-night/70">Frontend Architect &amp; UI Dev</div>
+</div>
+<div class="px-2 py-1 bg-blueprint-cyan text-terminal-night border border-terminal-night font-label-sm text-[11px] font-bold -rotate-3 shadow-[2px_2px_0px_#0A192F]">
+                  Tokyo / Remote
+                </div>
+</div>
+</div>
+<!-- Sticky Badge A: Quality & Vibe -->
+<div class="absolute -bottom-4 -left-4 z-40 bg-caution-yellow text-ink-black border-2 border-terminal-night font-label-sm text-xs font-bold px-3 py-1.5 shadow-[3px_3px_0px_#0A192F] -rotate-6 hover:rotate-0 transition-transform">
+              ✨ 100% Quality &amp; Vibe
+            </div>
+<!-- Sticky Badge B: Ships Fast -->
+<div class="absolute top-8 -right-4 z-40 bg-white text-electric-blue border-2 border-electric-blue font-label-sm text-xs font-bold px-3 py-1.5 shadow-[3px_3px_0px_#0047FF] rotate-6 hover:rotate-0 transition-transform">
+              ⚡ Ships Fast
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: DUAL HORIZONTAL MARQUEE / RUNNING TICKERS -->
+<section class="w-full overflow-hidden py-10 my-4 space-y-4">
+<!-- Ribbon 1: Electric Blue Ribbon (Scrolls Left) -->
+<div class="relative w-full overflow-hidden bg-electric-blue border-y-2 border-terminal-night py-3.5 shadow-[0_4px_0_#0A192F] -rotate-1">
+<div class="animate-marquee-left flex items-center gap-6 whitespace-nowrap font-label-lg text-sm tracking-wider uppercase text-white select-none">
+<div class="flex items-center gap-6">
+<span class="">Next.js</span><span class="text-caution-yellow">✦</span>
+<span class="">Tailwind CSS</span><span class="text-caution-yellow">●</span>
+<span class="">TypeScript</span><span class="text-caution-yellow">✦</span>
+<span class="">React</span><span class="text-caution-yellow">●</span>
+<span class="">Technical SEO</span><span class="text-caution-yellow">✦</span>
+<span class="">Web Performance</span><span class="text-caution-yellow">●</span>
+<span class="">Next.js 15</span><span class="text-caution-yellow">✦</span>
+<span class="">Cloudflare Edge</span><span class="text-caution-yellow">●</span>
+<span class="">Next.js</span><span class="text-caution-yellow">✦</span>
+<span class="">Tailwind CSS</span><span class="text-caution-yellow">●</span>
+<span class="">TypeScript</span><span class="text-caution-yellow">✦</span>
+<span class="">React</span><span class="text-caution-yellow">●</span>
+<span class="">Technical SEO</span><span class="text-caution-yellow">✦</span>
+<span class="">Web Performance</span><span class="text-caution-yellow">●</span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-6">
+<span class="">Next.js</span><span class="text-caution-yellow">✦</span>
+<span class="">Tailwind CSS</span><span class="text-caution-yellow">●</span>
+<span class="">TypeScript</span><span class="text-caution-yellow">✦</span>
+<span class="">React</span><span class="text-caution-yellow">●</span>
+<span class="">Technical SEO</span><span class="text-caution-yellow">✦</span>
+<span class="">Web Performance</span><span class="text-caution-yellow">●</span>
+<span class="">Next.js 15</span><span class="text-caution-yellow">✦</span>
+<span class="">Cloudflare Edge</span><span class="text-caution-yellow">●</span>
+<span class="">Next.js</span><span class="text-caution-yellow">✦</span>
+<span class="">Tailwind CSS</span><span class="text-caution-yellow">●</span>
+<span class="">TypeScript</span><span class="text-caution-yellow">✦</span>
+<span class="">React</span><span class="text-caution-yellow">●</span>
+<span class="">Technical SEO</span><span class="text-caution-yellow">✦</span>
+<span class="">Web Performance</span><span class="text-caution-yellow">●</span>
+</div>
+</div>
+</div>
+<!-- Ribbon 2: White Paper Tape Ribbon (Scrolls Right) -->
+<div class="relative w-full overflow-hidden bg-white border-y-2 border-electric-blue py-3.5 shadow-[0_4px_0_#0047FF] rotate-1">
+<div class="animate-marquee-right flex items-center gap-5 whitespace-nowrap font-label-md text-xs font-bold tracking-wider uppercase text-terminal-night select-none">
+<div class="flex items-center gap-5">
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Figma</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-caution-yellow text-ink-black border border-terminal-night">Git / GitHub</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">VS Code</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-blueprint-cyan text-terminal-night border border-terminal-night">Node.js</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Server Setup</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Responsive Design</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-caution-yellow text-ink-black border border-terminal-night">UI/UX Polish</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Figma</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-caution-yellow text-ink-black border border-terminal-night">Git / GitHub</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">VS Code</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-blueprint-cyan text-terminal-night border border-terminal-night">Node.js</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Server Setup</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Responsive Design</span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-5">
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Figma</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-caution-yellow text-ink-black border border-terminal-night">Git / GitHub</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">VS Code</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-blueprint-cyan text-terminal-night border border-terminal-night">Node.js</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Server Setup</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Responsive Design</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-caution-yellow text-ink-black border border-terminal-night">UI/UX Polish</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Figma</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-caution-yellow text-ink-black border border-terminal-night">Git / GitHub</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">VS Code</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2 py-0.5 bg-blueprint-cyan text-terminal-night border border-terminal-night">Node.js</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Server Setup</span>
+<span class="text-electric-blue font-black">/</span>
+<span class="px-2.5 py-0.5 bg-paper-wash border border-terminal-night text-terminal-night">Responsive Design</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: WORK EXPERIENCE / CAREER JOURNAL -->
+<section class="max-w-6xl mx-auto px-6 py-20" id="experience">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+<div class="space-y-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-paper-wash text-terminal-night font-label-sm text-xs border border-terminal-night font-bold uppercase shadow-sm">
+<span class="text-electric-blue">●</span>
+<span class="">CAREER JOURNAL // VERIFIED EXPERIENCE</span>
+</div>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold text-terminal-night tracking-tight">
+        Where I've Been Working
+      </h2>
+</div>
+<div class="font-label-md text-xs text-terminal-night/60 uppercase tracking-wider">
+      TRACK RECORD // 2020 — 2025
+    </div>
+</div>
+<!-- Vertical List of Memo Slip / Receipt Cards -->
+<div class="space-y-6">
+<!-- Memo Card 1 -->
+<div class="relative bg-white border-2 border-terminal-night p-6 sm:p-8 shadow-[4px_4px_0px_#0047FF] hover:-translate-y-1 transition-all">
+<!-- Tape Accent Top-Right -->
+<div class="absolute -top-3.5 right-6 w-20 h-6 bg-caution-yellow/85 border border-terminal-night rotate-2 pointer-events-none shadow-sm"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start lg:items-center justify-between">
+<!-- Year Period + Job Title -->
+<div class="lg:col-span-4 space-y-2">
+<div class="inline-block px-2.5 py-0.5 bg-caution-yellow text-ink-black font-label-sm text-xs font-bold border border-terminal-night">
+            2024 — Present
+          </div>
+<h3 class="font-headline-sm text-xl font-bold text-terminal-night">
+            Senior Frontend Engineer
+          </h3>
+</div>
+<!-- Company & Location -->
+<div class="lg:col-span-3 space-y-1">
+<div class="font-headline-sm text-base font-bold text-electric-blue">
+            Veloce Labs
+          </div>
+<div class="inline-flex items-center gap-1.5 font-label-sm text-xs text-terminal-night/70">
+<span class="material-symbols-outlined text-sm text-terminal-night/60">location_on</span>
+<span class="">Remote / Tokyo</span>
+</div>
+</div>
+<!-- Concise Focus Sentence -->
+<div class="lg:col-span-3 font-body-md text-sm text-terminal-night/85 leading-relaxed">
+          Spearheading next-generation client architectures and reducing Core Web Vitals to sub-second benchmarks.
+        </div>
+<!-- Tech Pill Tags -->
+<div class="lg:col-span-2 flex lg:justify-end">
+<span class="px-3 py-1 bg-paper-wash text-terminal-night font-label-sm text-xs font-bold border border-terminal-night shadow-sm whitespace-nowrap">
+            Next.js • Performance
+          </span>
+</div>
+</div>
+</div>
+<!-- Memo Card 2 -->
+<div class="relative bg-white border-2 border-terminal-night p-6 sm:p-8 shadow-[4px_4px_0px_#0047FF] hover:-translate-y-1 transition-all">
+<!-- Tape Accent Top-Left -->
+<div class="absolute -top-3.5 left-8 w-20 h-6 bg-caution-yellow/85 border border-terminal-night -rotate-2 pointer-events-none shadow-sm"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start lg:items-center justify-between">
+<!-- Year Period + Job Title -->
+<div class="lg:col-span-4 space-y-2">
+<div class="inline-block px-2.5 py-0.5 bg-caution-yellow text-ink-black font-label-sm text-xs font-bold border border-terminal-night">
+            2022 — 2024
+          </div>
+<h3 class="font-headline-sm text-xl font-bold text-terminal-night">
+            UI/UX &amp; Web Developer
+          </h3>
+</div>
+<!-- Company & Location -->
+<div class="lg:col-span-3 space-y-1">
+<div class="font-headline-sm text-base font-bold text-electric-blue">
+            Hyperion Systems
+          </div>
+<div class="inline-flex items-center gap-1.5 font-label-sm text-xs text-terminal-night/70">
+<span class="material-symbols-outlined text-sm text-terminal-night/60">location_on</span>
+<span class="">Surabaya / Hybrid</span>
+</div>
+</div>
+<!-- Concise Focus Sentence -->
+<div class="lg:col-span-3 font-body-md text-sm text-terminal-night/85 leading-relaxed">
+          Constructed multi-product design systems and highly responsive web apps with strict accessibility compliance.
+        </div>
+<!-- Tech Pill Tags -->
+<div class="lg:col-span-2 flex lg:justify-end">
+<span class="px-3 py-1 bg-blueprint-cyan/30 text-terminal-night font-label-sm text-xs font-bold border border-terminal-night shadow-sm whitespace-nowrap">
+            Design Systems
+          </span>
+</div>
+</div>
+</div>
+<!-- Memo Card 3 -->
+<div class="relative bg-white border-2 border-terminal-night p-6 sm:p-8 shadow-[4px_4px_0px_#0047FF] hover:-translate-y-1 transition-all">
+<!-- Tape Accent Top-Right -->
+<div class="absolute -top-3.5 right-12 w-20 h-6 bg-caution-yellow/85 border border-terminal-night rotate-3 pointer-events-none shadow-sm"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start lg:items-center justify-between">
+<!-- Year Period + Job Title -->
+<div class="lg:col-span-4 space-y-2">
+<div class="inline-block px-2.5 py-0.5 bg-caution-yellow text-ink-black font-label-sm text-xs font-bold border border-terminal-night">
+            2020 — 2022
+          </div>
+<h3 class="font-headline-sm text-xl font-bold text-terminal-night">
+            Frontend Specialist
+          </h3>
+</div>
+<!-- Company & Location -->
+<div class="lg:col-span-3 space-y-1">
+<div class="font-headline-sm text-base font-bold text-electric-blue">
+            Chrono Studio
+          </div>
+<div class="inline-flex items-center gap-1.5 font-label-sm text-xs text-terminal-night/70">
+<span class="material-symbols-outlined text-sm text-terminal-night/60">work</span>
+<span class="">Contract / Global</span>
+</div>
+</div>
+<!-- Concise Focus Sentence -->
+<div class="lg:col-span-3 font-body-md text-sm text-terminal-night/85 leading-relaxed">
+          Delivered 20+ bespoke brand marketing sites, client dashboards, and high-velocity conversion funnels.
+        </div>
+<!-- Tech Pill Tags -->
+<div class="lg:col-span-2 flex lg:justify-end">
+<span class="px-3 py-1 bg-paper-wash text-terminal-night font-label-sm text-xs font-bold border border-terminal-night shadow-sm whitespace-nowrap">
+            Web Apps
+          </span>
+</div>
+</div>
+</div>
+</div>
+</section><section class="max-w-6xl mx-auto px-6 pb-12" id="now">
+  <div class="relative bg-white border-2 border-electric-blue p-6 sm:p-8 shadow-[4px_4px_0px_#0047FF]">
+    <!-- Washi Tape Accent at Top Center -->
+    <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-caution-yellow border border-electric-blue -rotate-1 pointer-events-none shadow-sm z-30"></div>
+    
+    <!-- Header Block -->
+    <div class="mb-6 space-y-2">
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-caution-yellow text-terminal-night font-label-sm text-xs font-bold uppercase tracking-wider border border-electric-blue">
+        <span class="text-electric-blue">●</span>
+        <span class="">CURRENT FOCUS</span>
+      </div>
+      <h2 class="font-headline-lg text-2xl sm:text-3xl font-bold text-terminal-night tracking-tight">
+        What I'm into right now
+      </h2>
+    </div>
+    
+    <!-- Content Items in Monospace -->
+    <div class="space-y-4 font-body-md text-sm text-terminal-night/85">
+      <div class="p-3 bg-paper-wash border border-terminal-night/20 flex items-start gap-3">
+        <span class="text-base leading-none select-none">🛠</span>
+        <div class="leading-relaxed">
+          <strong class="text-electric-blue font-bold">Building &amp; Refining:</strong> Deep diving into Next.js performance optimizations &amp; modern component patterns.
+        </div>
+      </div>
+      <div class="p-3 bg-paper-wash border border-terminal-night/20 flex items-start gap-3">
+        <span class="text-base leading-none select-none">⚡</span>
+        <div class="leading-relaxed">
+          <strong class="text-electric-blue font-bold">Experimenting:</strong> Exploring AI coding workflows and snappy micro-interactions.
+        </div>
+      </div>
+      <div class="p-3 bg-paper-wash border border-terminal-night/20 flex items-start gap-3">
+        <span class="text-base leading-none select-none">📍</span>
+        <div class="leading-relaxed">
+          <strong class="text-electric-blue font-bold">Location &amp; Status:</strong> Based in Surabaya, East Java — open for select freelance builds &amp; collaborations.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION 4: CONTACT & SOCIALS (Clean Neo-Paper Card & Minimal Friendly Footer) -->
+<section class="max-w-6xl mx-auto px-6 pt-12 pb-24" id="contact">
+<div class="bg-white border-2 border-terminal-night p-8 sm:p-12 shadow-[6px_6px_0px_#0047FF] relative overflow-hidden">
+<!-- Subtle corner tape -->
+<div class="absolute -top-3 right-8 w-24 h-6 bg-caution-yellow/80 border border-terminal-night rotate-3 pointer-events-none"></div>
+<div class="max-w-2xl space-y-4 mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-caution-yellow text-ink-black font-label-sm text-xs font-bold uppercase tracking-wider border border-terminal-night -rotate-1">
+<span class="">👋 LET'S CONNECT</span>
+</div>
+<h2 class="font-headline-lg text-3xl sm:text-4xl font-bold text-terminal-night tracking-tight">
+            Have a project in mind or just want to chat?
+          </h2>
+<p class="font-body-lg text-base text-terminal-night/80">
+            Always open for exciting frontend builds, redesigns, or friendly dev banter.
+          </p>
+</div>
+<!-- Pill Links -->
+<div class="flex flex-wrap items-center gap-3 pb-8 border-b-2 border-dashed border-terminal-night/20">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-caution-yellow text-ink-black font-label-md text-xs font-bold border-2 border-terminal-night shadow-[3px_3px_0px_#0A192F] hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" href="mailto:hi@Ibnuprtma.vercel.app">
+<span class="">📧 Email Me (hi@Ibnuprtma.vercel.app)</span>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-paper-wash text-terminal-night font-label-md text-xs font-bold border-2 border-terminal-night shadow-[3px_3px_0px_#0047FF] hover:bg-white hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="">🐙 GitHub</span>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-paper-wash text-terminal-night font-label-md text-xs font-bold border-2 border-terminal-night shadow-[3px_3px_0px_#0047FF] hover:bg-white hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="">💼 LinkedIn</span>
+</a>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-paper-wash text-terminal-night font-label-md text-xs font-bold border-2 border-terminal-night shadow-[3px_3px_0px_#0047FF] hover:bg-white hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all" href="https://twitter.com" rel="noopener noreferrer" target="_blank">
+<span class="">🐦 X / Twitter</span>
+</a>
+</div>
+<!-- Minimal Copyright & Vibe Note -->
+<div class="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-label-sm text-xs text-terminal-night/70">
+<div class="">© 2025 Ibnu — Handcrafted with clean code &amp; good vibes.</div>
+<div class="inline-flex items-center gap-1.5 text-electric-blue font-bold">
+<span class="w-2 h-2 rounded-full bg-electric-blue"></span>
+<span class="">NO FLUFF // ALL SIGNAL</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+</body></html>

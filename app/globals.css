@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-caution-yellow: #FFD600;
+  --color-electric-blue: #0047FF;
+  --color-terminal-night: #0A192F;
+  --color-paper-wash: #FEFCE8;
+  --color-canvas-bg: #FFFFFF;
+  --color-blueprint-cyan: #7DD3FC;
+  --color-ink-black: #000000;
+
+  --font-headline: var(--font-space-grotesk), sans-serif;
+  --font-sans: var(--font-space-grotesk), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-body: var(--font-jetbrains-mono), monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #0A192F;
+    font-family: var(--font-jetbrains-mono), monospace;
+  }
+
+  ::selection {
+    background-color: #FFD600;
+    color: #000000;
+  }
+}
+
+/* Neo-Brutalist Dot Grid Canvas */
+.bg-dot-grid {
+  background-color: #FFFFFF;
+  background-image: radial-gradient(#0047FF 1.1px, transparent 1.1px);
+  background-size: 24px 24px;
+}
+
+/* Running Marquee Animations */
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 25s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-right 28s linear infinite;
+}
+
+.marquee-wrapper:hover .animate-marquee-left,
+.marquee-wrapper:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+  }
+}
